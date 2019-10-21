@@ -1,0 +1,52 @@
+<idea-plugin>
+  <id>com.asysbang.plugin</id>
+  <name>Asysbang For Android</name>
+  <version>1.0</version>
+  <vendor email="asysbang@163.com" url="https://github.com/asysbang/plugin_android">asysbang</vendor>
+
+  <description>Android For Android, source code is in github, everyone can develop it.</description>
+
+  <change-notes>Fast Smart, help android developers to make applications</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+
+
+  <actions>
+    <!-- menu in main-->
+    <group id="asysbang" text="aSysbang">
+      <add-to-group group-id="MainMenu" anchor="last" />
+    </group>
+
+    <!-- Add your actions here -->
+    <action id="MenuAction" class="com.asysbang.plugin.MainMenuAction" text="MainMenuAction"
+            description="MainMenuAction">
+      <add-to-group group-id="asysbang" />
+    </action>
+
+    <action id="create_file" class="com.asysbang.plugin.CreateFileAction" text="CreateFile"
+            description="Create file">
+      <add-to-group group-id="asysbang" />
+    </action>
+
+    <action id="get_file" class="com.asysbang.plugin.GetFile" text="GetFile"
+            description="Get file">
+      <add-to-group group-id="asysbang" />
+    </action>
+
+  </actions>
+
+
+</idea-plugin>
