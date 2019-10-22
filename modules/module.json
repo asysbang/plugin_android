@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "modules": [
+    {
+      "name": "test",
+      "version": "1.2",
+      "md5": "123456",
+      "url": "www.github.com"
+    },
+    {
+      "name": "test",
+      "version": "1.2",
+      "md5": "123456",
+      "url": "www.github.com"
+    },
+    {
+      "name": "test",
+      "version": "1.2",
+      "md5": "123456",
+      "url": "www.github.com"
+    }
+  ]
+}
