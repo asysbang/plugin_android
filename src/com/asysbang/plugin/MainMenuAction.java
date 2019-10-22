@@ -6,13 +6,10 @@ import com.intellij.openapi.ui.Messages;
 
 
 /**
- *
+ * 测试 下载一个module
  */
 public class MainMenuAction extends AnAction {
 
-    /**
-     * @param e
-     */
     @Override
     public void actionPerformed(AnActionEvent e) {
 

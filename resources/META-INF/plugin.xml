@@ -22,6 +22,8 @@
         <!-- Add your extensions here -->
         <applicationService serviceInterface="com.asysbang.plugin.service.Appservice"
                             serviceImplementation="com.asysbang.plugin.service.AppServiceImpl"/>
+
+      <toolWindow id="asysbang tool" anchor="right" factoryClass="com.asysbang.plugin.window.MyToolWindow" secondary="true" icon="/window/plus.png"></toolWindow>
     </extensions>
 
     <actions>
@@ -46,7 +48,7 @@
             <add-to-group group-id="asysbang"/>
         </action>
 
-      <action id="load_module" class="com.asysbang.plugin.mudole.ModuleAction" text="Load Module"
+      <action id="load_module" class="com.asysbang.plugin.module.ModuleAction" text="Load Module"
               description="Load Module">
         <add-to-group group-id="asysbang"/>
       </action>
