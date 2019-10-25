@@ -95,6 +95,7 @@ public class MainMenuAction extends AnAction {
                                     is.close();
                                 }
                             }
+                            //部署有问题，需要关闭在重新打开项目
                             disposeModule();
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -102,7 +103,7 @@ public class MainMenuAction extends AnAction {
                     }
                 });
                 //应该在文件全部处理之后再弹出，需要知道怎么线程之间通信
-                Messages.showMessageDialog("Add Successfully, please close project and re-open project after 5 seconds","New Module",Messages.getInformationIcon());
+                Messages.showMessageDialog("添加成功，等待项目刷新之后，关闭项目，再重新打开项目","新模块",Messages.getInformationIcon());
             }
         });
     }

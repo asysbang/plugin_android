@@ -23,35 +23,72 @@
         <applicationService serviceInterface="com.asysbang.plugin.service.Appservice"
                             serviceImplementation="com.asysbang.plugin.service.AppServiceImpl"/>
 
-      <toolWindow id="asysbang tool" anchor="right" factoryClass="com.asysbang.plugin.window.MyToolWindow" secondary="true" icon="/window/plus.png"></toolWindow>
+        <toolWindow id="asysbang tool" anchor="right" factoryClass="com.asysbang.plugin.window.MyToolWindow"
+                    secondary="true" icon="/window/plus.png"></toolWindow>
     </extensions>
 
     <actions>
         <!-- menu in main-->
-        <group id="asysbang" text="aSysbang">
+        <group id="asysbang1" text="aSysbang1">
             <add-to-group group-id="MainMenu" anchor="last"/>
         </group>
 
         <!-- Add your actions here -->
         <action id="MenuAction" class="com.asysbang.plugin.MainMenuAction" text="MainMenuAction"
                 description="MainMenuAction">
-            <add-to-group group-id="asysbang"/>
+            <add-to-group group-id="asysbang1"/>
         </action>
 
         <action id="create_file" class="com.asysbang.plugin.CreateFileAction" text="CreateFile"
                 description="Create file">
-            <add-to-group group-id="asysbang"/>
+            <add-to-group group-id="asysbang1"/>
         </action>
 
         <action id="get_file" class="com.asysbang.plugin.GetFile" text="GetFile"
                 description="Get file">
-            <add-to-group group-id="asysbang"/>
+            <add-to-group group-id="asysbang1"/>
         </action>
 
-      <action id="load_module" class="com.asysbang.plugin.module.ModuleAction" text="Load Module"
-              description="Load Module">
-        <add-to-group group-id="asysbang"/>
-      </action>
+        <action id="load_module" class="com.asysbang.plugin.module.ModuleAction" text="Load Module"
+                description="Load Module">
+            <add-to-group group-id="asysbang1"/>
+        </action>
+
+        <group id="menu_asysbang" text="aSysbang">
+            <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
+            <group id="menu_module" text="Module" popup="true">
+                <action class="com.asysbang.plugin.actions.ModuleListAll" id="module_list" text="List All Modules"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="module_add" text="Add Hello Module"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="module_custom" text="Add Custom Module"/>
+            </group>
+            <separator/>
+
+            <group id="menu_test" text="Test" popup="true">
+                <action class="com.asysbang.plugin.actions.ShellCommand" id="test_a" text="Shell Command"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="test_b" text="Test_B"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="test_c" text="Test_C"/>
+            </group>
+            <separator/>
+
+            <group id="menu_popup" text="Demo for Popup" popup="true">
+                <action class="com.asysbang.plugin.actions.PopupDemo" id="popup_list_base" text="List Base"/>
+                <action class="com.asysbang.plugin.actions.PopupDemo" id="popup_b" text="Popup Demo"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="popup_c" text="Test_C"/>
+            </group>
+            <separator/>
+
+            <group id="menu_ui" text="Demo for UI" popup="true">
+                <action class="com.asysbang.plugin.actions.TestAction" id="ui_dialog" text="UI Dialog"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="ui_progress" text="UI Progress"/>
+                <action class="com.asysbang.plugin.actions.TestAction" id="ui_c" text="UI_C"/>
+            </group>
+            <separator/>
+            <action id="a1" class="com.asysbang.plugin.actions.TestAction" text="AAAA"/>
+            <action id="a2" class="com.asysbang.plugin.actions.TestAction" text="BBBB"/>
+            <action id="b1" class="com.asysbang.plugin.actions.TestAction" text="CCCC"/>
+        </group>
+
+
     </actions>
 
     <application-components>
