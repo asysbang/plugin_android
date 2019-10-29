@@ -57,7 +57,7 @@
         <group id="menu_asysbang" text="aSysbang">
             <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
             <group id="menu_module" text="Module" popup="true">
-                <action class="com.asysbang.plugin.actions.ModuleListAll" id="module_list" text="List All Modules"/>
+                <action class="com.asysbang.plugin.actions.module.ModuleListAll" id="module_list" text="List All Modules"/>
                 <action class="com.asysbang.plugin.actions.TestAction" id="module_add" text="Add Hello Module"/>
                 <action class="com.asysbang.plugin.actions.TestAction" id="module_custom" text="Add Custom Module"/>
             </group>
@@ -79,7 +79,7 @@
 
             <group id="menu_ui" text="Demo for UI" popup="true">
                 <action class="com.asysbang.plugin.actions.TestAction" id="ui_dialog" text="UI Dialog"/>
-                <action class="com.asysbang.plugin.actions.TestAction" id="ui_progress" text="UI Progress"/>
+                <action class="com.asysbang.plugin.actions.ProgressBarDemo" id="ui_progress" text="UI Progress"/>
                 <action class="com.asysbang.plugin.actions.TestAction" id="ui_c" text="UI_C"/>
             </group>
             <separator/>

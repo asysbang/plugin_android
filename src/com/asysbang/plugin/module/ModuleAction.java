@@ -15,13 +15,13 @@ public class ModuleAction extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
-        Project project= anActionEvent.getProject();
+        Project project = anActionEvent.getProject();
         ApplicationManager.getApplication().invokeLater(new Runnable() {
             @Override
             public void run() {
                 VirtualFile configFile = VirtualFileManager.getInstance().refreshAndFindFileByUrl("https://raw.githubusercontent.com/asysbang/plugin_android/master/modules/module.json");
                 boolean exists = configFile.exists();
-                System.out.println("====="+exists);
+                System.out.println("=====" + exists);
                 configFile.refresh(true, true, new Runnable() {
                     @Override
                     public void run() {
@@ -33,11 +33,11 @@ public class ModuleAction extends AnAction {
 //                            while ((len = inputStream.read(buff))!=-1) {
 //                                System.out.println("===read==");
 //                            }
-                    BufferedReader bis = new BufferedReader(new InputStreamReader(inputStream));
-                    String line = null;
-                    while ((line = bis.readLine()) != null) {
-                        System.out.println("===>>>"+line);
-                    }
+                            BufferedReader bis = new BufferedReader(new InputStreamReader(inputStream));
+                            String line = null;
+                            while ((line = bis.readLine()) != null) {
+                                System.out.println("===>>>" + line);
+                            }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
