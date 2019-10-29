@@ -2,22 +2,28 @@
   "version": "1.0",
   "modules": [
     {
-      "name": "test",
-      "version": "1.2",
-      "md5": "123456",
-      "url": "www.github.com"
+      "name": "audiomodule",
+      "version": "1.0",
+      "md5": "f1a7dd264965fc2ebbcd877721485fa5",
+      "url": "https://github.com/asysbang/plugin_android/blob/master/modules/audiomodule.zip?raw=true"
     },
     {
-      "name": "test",
-      "version": "1.2",
-      "md5": "123456",
-      "url": "www.github.com"
+      "name": "opencvmodule",
+      "version": "1.0",
+      "md5": "41f447bbe5869b46627706fa60239a5b",
+      "url": "https://github.com/asysbang/plugin_android/blob/master/modules/opencvmodule.zip?raw=true"
     },
     {
-      "name": "test",
-      "version": "1.2",
-      "md5": "123456",
-      "url": "www.github.com"
+      "name": "wifimodule",
+      "version": "1.0",
+      "md5": "62223bdd34fdf047c5cc87b0a8d33463",
+      "url": "https://github.com/asysbang/plugin_android/blob/master/modules/wifimodule.zip?raw=true"
+    },
+    {
+      "name": "tesseractmodule",
+      "version": "1.0",
+      "md5": "be989ebaa56fa7330c768693d3b977ea",
+      "url": "https://github.com/asysbang/plugin_android/blob/master/modules/tesseractmodule.zip?raw=true"
     }
   ]
 }
