@@ -6,6 +6,8 @@ import com.intellij.ui.components.JBList;
 import gherkin.lexer.Ja;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
@@ -80,9 +82,10 @@ public class ModuleListPanel extends JPanel {
 
         public MyCellRenderer() {
             super(new BorderLayout());
-            add(name, BorderLayout.EAST);
+//            setBorder(new EmptyBorder(20,20,20,20));
+            add(name, BorderLayout.WEST);
             add(url, BorderLayout.CENTER);
-            add(version, BorderLayout.WEST);
+            add(version, BorderLayout.EAST);
             ok = new JButton("下载/安装/删除/管理");
             ok.addActionListener(l);//接收不到点击事件
             add(ok, BorderLayout.SOUTH);
@@ -97,8 +100,10 @@ public class ModuleListPanel extends JPanel {
             if (isSelected) {
                 this.setBackground(Color.blue);
             } else {
-                this.setBackground(Color.WHITE);
+                this.setBackground(null);
             }
+            Border titleBorder1=BorderFactory.createTitledBorder(info.getName());
+            setBorder(titleBorder1);
             //当鼠标进入也会出发这个刷新
 //            System.out.println("===>>> ["+index + " , "+ isSelected+ " , "+cellHasFocus+"]");
             return this;
