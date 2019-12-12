@@ -52,6 +52,7 @@ public class ModuleListAll extends AnAction implements ModuleListPanel.SelectedC
         showPopupList(anActionEvent);
     }
 
+    //官方config  和  本地~/.asysbang/module.json 两部分组成
     private void loadConfig() {
         VirtualFile configFile = VirtualFileManager.getInstance().refreshAndFindFileByUrl(CONFIG_URL);
         StringBuilder sb = new StringBuilder();
@@ -149,6 +150,7 @@ public class ModuleListAll extends AnAction implements ModuleListPanel.SelectedC
             Element newModule = doc.createElement("module");
             newModule.setAttribute("fileurl", "file://$PROJECT_DIR$" + File.separator + mSelectedModule.getName()+File.separator+mSelectedModule.getName()+".iml");
             newModule.setAttribute("filepath", "$PROJECT_DIR$" + File.separator + mSelectedModule.getName()+File.separator+mSelectedModule.getName()+".iml");
+            System.out.println("====addModules : " + modulesFile.getAbsolutePath());
             modulesNode.appendChild(newModule);
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             // 10、创建 Transformer 对象

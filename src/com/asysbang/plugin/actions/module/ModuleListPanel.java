@@ -92,6 +92,13 @@ public class ModuleListPanel extends JPanel {
         }
 
         @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.setColor(Color.DARK_GRAY);
+            g.drawLine(10, getHeight() - 1, getWidth()-10, getHeight() - 1);
+        }
+
+        @Override
         public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
             ModuleInfo info = (ModuleInfo) value;
             name.setText(info.getName());
